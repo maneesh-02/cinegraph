@@ -39,14 +39,7 @@ async function getActorsInMovie(id) {
   return records.map((r) => r.toObject());
 }
 
-/**
- * QUERY 4 — Connected movies.
- * Movie <- ACTED_IN <- Actor -> ACTED_IN -> OtherMovie (2 hops)
- * Finds other movies that share at least one actor with the given movie,
- * excludes the original movie, and returns a shared-actor count so the UI
- * can say "Connected through N shared actors". This is the query that
- * makes the graph aspect of the app visible to the user.
- */
+
 async function getConnectedMovies(id) {
   const records = await runQuery(
     `MATCH (m:Movie {id: $id})<-[:ACTED_IN]-(a:Actor)-[:ACTED_IN]->(other:Movie)
@@ -60,16 +53,7 @@ async function getConnectedMovies(id) {
   return records.map((r) => r.toObject());
 }
 
-/**
- * QUERY 5 — Graph exploration / highlight query.
- * Movie -> ACTED_IN -> Actor -> ACTED_IN -> OtherMovie -> DIRECTED_BY -> Director (3 hops)
- * Returns movies connected via shared actors, together with who directed
- * each connected movie. This is the query the README highlights as
- * genuinely graph-oriented: walking outward through people (actors) to
- * find the directors two degrees removed from the starting movie would
- * require several chained joins and an extra aggregation in SQL, whereas
- * here it's one traversal.
- */
+
 async function getExploreGraph(id) {
   const records = await runQuery(
     `MATCH (m:Movie {id: $id})<-[:ACTED_IN]-(a:Actor)-[:ACTED_IN]->(other:Movie)
@@ -84,12 +68,7 @@ async function getExploreGraph(id) {
   return records.map((r) => r.toObject());
 }
 
-/**
- * QUERY 6 — Discovery: shared actor AND shared genre.
- * Demonstrates combining two relationship conditions in one traversal:
- * the candidate movie must connect to the source movie through both a
- * shared actor and a shared genre.
- */
+
 async function getDiscoveryMatches(id) {
   const records = await runQuery(
     `MATCH (m:Movie {id: $id})-[:BELONGS_TO]->(g:Genre)<-[:BELONGS_TO]-(other:Movie)
