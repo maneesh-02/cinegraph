@@ -1,7 +1,6 @@
 const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api";
 
-// Thin wrapper around fetch that normalizes errors so every page can
-// handle "loading / empty / error" with the same shape of information.
+
 export async function apiGet(path) {
   let response;
   try {
