@@ -1,8 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 
-// Small shared hook so every page gets consistent loading/error/data
-// handling without repeating the same three useState calls everywhere.
-// `deps` controls when the fetch re-runs (e.g. when a route :id changes).
+.
 export function useFetch(fetchFn, deps = []) {
   const [data, setData] = useState(null);
   const [status, setStatus] = useState("loading"); // loading | success | error
