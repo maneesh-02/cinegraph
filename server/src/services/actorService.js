@@ -19,7 +19,7 @@ async function getActorById(id) {
   return records[0].toObject();
 }
 
-// QUERY 1 — Actor -> ACTED_IN -> Movie (1 hop)
+
 async function getMoviesByActor(id) {
   const records = await runQuery(
     `MATCH (a:Actor {id: $id})-[:ACTED_IN]->(m:Movie)
@@ -32,11 +32,7 @@ async function getMoviesByActor(id) {
   return records.map((r) => r.toObject());
 }
 
-/**
- * QUERY 3 — Actor -> ACTED_IN -> Movie -> DIRECTED_BY -> Director (2 hops)
- * Finds directors who directed movies featuring this actor, with the
- * shared movie titles so the UI can show "worked together on X, Y".
- */
+
 async function getDirectorsForActor(id) {
   const records = await runQuery(
     `MATCH (a:Actor {id: $id})-[:ACTED_IN]->(m:Movie)-[:DIRECTED_BY]->(d:Director)
