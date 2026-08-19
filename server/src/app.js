@@ -25,19 +25,16 @@ app.use("/api/genres", genreRoutes);
 app.use("/api/studios", studioRoutes);
 app.use("/api/stats", statsRoutes);
 
-// Fallback for unknown routes.
+
 app.use((req, res) => {
   res.status(404).json({ error: "Route not found." });
 });
 
-// Centralized error handler. Every controller forwards errors here via
-// next(err) so we have one place that decides status codes and logging.
-// eslint-disable-next-line no-unused-vars
+
 app.use((err, req, res, next) => {
   console.error("[error]", err);
 
-  // neo4j-driver throws typed errors with a `code` field for connectivity
-  // issues (e.g. ServiceUnavailable) — surface those as 503, not 500.
+
   if (err.code && String(err.code).includes("ServiceUnavailable")) {
     return res.status(503).json({ error: "Database is currently unavailable. Please try again shortly." });
   }
