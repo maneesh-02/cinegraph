@@ -1,10 +1,3 @@
-// Pure seed data for CineGraph — separated from the runner script for readability.
-// This dataset uses real, well-known Bollywood and Tollywood (Telugu cinema)
-// films, actors, and directors. Titles, years, directors, and lead cast are
-// drawn from well-documented, widely known facts. A few studio-to-film
-// production credits are approximate/illustrative rather than verified —
-// this is seed data for a graph-database demo, not an authoritative
-// filmography, so double-check any specific credit before relying on it.
 
 const genres = [
   { id: "g1", name: "Drama" },
@@ -138,125 +131,12 @@ module.exports = { genres, studios, directors, actors, movies };
 
 
 
-// // Pure seed data for CineGraph — separated from the runner script for readability.
-// // All entities are fictional (invented titles/names) to keep this a clean,
-// // self-contained demo dataset with no real-world attribution concerns.
 
-// const genres = [
-//   { id: "g1", name: "Action" },
-//   { id: "g2", name: "Drama" },
-//   { id: "g3", name: "Sci-Fi" },
-//   { id: "g4", name: "Comedy" },
-//   { id: "g5", name: "Thriller" },
-//   { id: "g6", name: "Romance" },
-//   { id: "g7", name: "Fantasy" },
-//   { id: "g8", name: "Horror" },
-//   { id: "g9", name: "Mystery" },
-//   { id: "g10", name: "Animation" },
-// ];
 
-// const studios = [
-//   { id: "st1", name: "Northstar Pictures" },
-//   { id: "st2", name: "Ember Road Films" },
-//   { id: "st3", name: "BluePeak Studios" },
-//   { id: "st4", name: "Horizon Line Entertainment" },
-//   { id: "st5", name: "Copper Lantern Films" },
-//   { id: "st6", name: "Vantage Point Studios" },
-//   { id: "st7", name: "Driftwood Media" },
-// ];
-
-// const directors = [
-//   { id: "d1", name: "Maren Castillo" },
-//   { id: "d2", name: "Theo Whitfield" },
-//   { id: "d3", name: "Priya Anand" },
-//   { id: "d4", name: "Jonas Ellery" },
-//   { id: "d5", name: "Sofia Marchetti" },
-//   { id: "d6", name: "Elliot Brandt" },
-//   { id: "d7", name: "Naomi Voss" },
-//   { id: "d8", name: "Callum Reyes" },
-//   { id: "d9", name: "Iris Nakamura" },
-//   { id: "d10", name: "Victor Solano" },
-//   { id: "d11", name: "Freya Lindqvist" },
-//   { id: "d12", name: "Marcus Odell" },
-//   { id: "d13", name: "Lena Kovac" },
-//   { id: "d14", name: "Dmitri Orlov" },
-//   { id: "d15", name: "Ana Beaumont" },
-// ];
-
-// const actors = [
-//   { id: "a1", name: "Nova Ashford", birthYear: 1988 },
-//   { id: "a2", name: "Silas Vance", birthYear: 1979 },
-//   { id: "a3", name: "Wren Callahan", birthYear: 1990 },
-//   { id: "a4", name: "Beatrix Solene", birthYear: 1985 },
-//   { id: "a5", name: "Julian Marchetti", birthYear: 1975 },
-//   { id: "a6", name: "Odette Farrow", birthYear: 1993 },
-//   { id: "a7", name: "Gideon Marsh", birthYear: 1982 },
-//   { id: "a8", name: "Ines Bellamy", birthYear: 1991 },
-//   { id: "a9", name: "Rafael Odom", birthYear: 1978 },
-//   { id: "a10", name: "Talia Sinclair", birthYear: 1989 },
-//   { id: "a11", name: "Milo Thackeray", birthYear: 1986 },
-//   { id: "a12", name: "Coraline Ashby", birthYear: 1994 },
-//   { id: "a13", name: "Desmond Rourke", birthYear: 1980 },
-//   { id: "a14", name: "Yara Delacroix", birthYear: 1992 },
-//   { id: "a15", name: "Atticus Grey", birthYear: 1983 },
-//   { id: "a16", name: "Selene Vargas", birthYear: 1987 },
-//   { id: "a17", name: "Emrys Caldwell", birthYear: 1976 },
-//   { id: "a18", name: "Marisol Quinn", birthYear: 1990 },
-//   { id: "a19", name: "Tobias Renfrew", birthYear: 1984 },
-//   { id: "a20", name: "Aurelia Stone", birthYear: 1993 },
-//   { id: "a21", name: "Cassius Whitlock", birthYear: 1981 },
-//   { id: "a22", name: "Ophelia Brandt", birthYear: 1988 },
-//   { id: "a23", name: "Nikolai Voss", birthYear: 1977 },
-//   { id: "a24", name: "Ivy Callahan", birthYear: 1995 },
-//   { id: "a25", name: "Barnaby Fitch", birthYear: 1985 },
-//   { id: "a26", name: "Rosalind Marchetti", birthYear: 1990 },
-//   { id: "a27", name: "Dashiell Kane", birthYear: 1979 },
-//   { id: "a28", name: "Wilhelmina Cross", birthYear: 1986 },
-//   { id: "a29", name: "Percival Lang", birthYear: 1974 },
-//   { id: "a30", name: "Seraphina Woods", birthYear: 1992 },
-//   { id: "a31", name: "Ezekiel Thorne", birthYear: 1982 },
-//   { id: "a32", name: "Marguerite Delvaux", birthYear: 1989 },
-//   { id: "a33", name: "Ambrose Finch", birthYear: 1980 },
-//   { id: "a34", name: "Clementine Reyes", birthYear: 1994 },
-//   { id: "a35", name: "Thaddeus Wren", birthYear: 1978 },
-//   { id: "a36", name: "Isolde Marchbanks", birthYear: 1987 },
-//   { id: "a37", name: "Orson Blackwood", birthYear: 1983 },
-//   { id: "a38", name: "Vesper Callahan", birthYear: 1991 },
-//   { id: "a39", name: "Leopold Sterling", birthYear: 1976 },
-//   { id: "a40", name: "Genevieve Ashcroft", birthYear: 1990 },
-// ];
-
-// const movies = [
-//   { id: "m1", title: "Silent Horizon", releaseYear: 2015, rating: 7.8, description: "A stranded astronaut fights to survive on a dying space station.", directorId: "d1", studioId: "st1", genreIds: ["g3", "g5"], actorIds: ["a1", "a2", "a3", "a4"] },
-//   { id: "m2", title: "Ashes of Meridian", releaseYear: 2016, rating: 7.2, description: "A detective uncovers a conspiracy tying together three unsolved murders.", directorId: "d2", studioId: "st2", genreIds: ["g5", "g9"], actorIds: ["a5", "a6", "a7", "a8"] },
-//   { id: "m3", title: "The Gilded Hour", releaseYear: 2014, rating: 6.9, description: "A jazz pianist in a fading dance hall navigates love and ambition.", directorId: "d3", studioId: "st3", genreIds: ["g2", "g6"], actorIds: ["a9", "a10", "a11", "a12"] },
-//   { id: "m4", title: "Wolves of Kestrel Pass", releaseYear: 2017, rating: 8.1, description: "Two rival smugglers form an uneasy alliance to survive a mountain winter.", directorId: "d4", studioId: "st1", genreIds: ["g1", "g2"], actorIds: ["a1", "a13", "a14", "a15"] },
-//   { id: "m5", title: "Paper Lanterns", releaseYear: 2013, rating: 7.0, description: "A grieving widow rebuilds her life in a small coastal town.", directorId: "d5", studioId: "st4", genreIds: ["g2", "g6"], actorIds: ["a16", "a17", "a18", "a2"] },
-//   { id: "m6", title: "Static Bloom", releaseYear: 2018, rating: 6.5, description: "A group of hackers accidentally trigger a citywide blackout.", directorId: "d6", studioId: "st5", genreIds: ["g5", "g3"], actorIds: ["a19", "a20", "a3", "a21"] },
-//   { id: "m7", title: "The Cartographer's Daughter", releaseYear: 2012, rating: 7.6, description: "An explorer's daughter continues his search for a lost city.", directorId: "d7", studioId: "st2", genreIds: ["g1", "g7"], actorIds: ["a22", "a23", "a5", "a24"] },
-//   { id: "m8", title: "Midnight Carousel", releaseYear: 2019, rating: 6.8, description: "A traveling circus hides a dark secret from its newest performer.", directorId: "d8", studioId: "st6", genreIds: ["g8", "g9"], actorIds: ["a25", "a26", "a6", "a27"] },
-//   { id: "m9", title: "Ember and Iron", releaseYear: 2016, rating: 7.9, description: "A blacksmith's apprentice discovers she's the last of a forgotten order.", directorId: "d9", studioId: "st1", genreIds: ["g7", "g1"], actorIds: ["a1", "a28", "a29", "a4"] },
-//   { id: "m10", title: "Low Tide", releaseYear: 2011, rating: 6.3, description: "A fisherman's family confronts old secrets during a coastal storm.", directorId: "d10", studioId: "st4", genreIds: ["g2", "g5"], actorIds: ["a16", "a30", "a31", "a17"] },
-//   { id: "m11", title: "The Quiet Frequency", releaseYear: 2020, rating: 7.4, description: "A radio operator intercepts a signal that shouldn't exist.", directorId: "d1", studioId: "st3", genreIds: ["g3", "g9"], actorIds: ["a2", "a32", "a33", "a3"] },
-//   { id: "m12", title: "Vermilion Nights", releaseYear: 2015, rating: 6.7, description: "Two con artists fall for each other while running the same scheme.", directorId: "d11", studioId: "st5", genreIds: ["g6", "g4"], actorIds: ["a34", "a35", "a9", "a36"] },
-//   { id: "m13", title: "Fields of Amaranth", releaseYear: 2014, rating: 7.1, description: "A farming family struggles to hold onto their land during a drought.", directorId: "d3", studioId: "st7", genreIds: ["g2"], actorIds: ["a10", "a37", "a38", "a11"] },
-//   { id: "m14", title: "The Last Cartridge", releaseYear: 2017, rating: 7.7, description: "A retired soldier is pulled back into one final mission.", directorId: "d12", studioId: "st2", genreIds: ["g1", "g5"], actorIds: ["a22", "a39", "a40", "a23"] },
-//   { id: "m15", title: "Hollow Constellations", releaseYear: 2021, rating: 8.0, description: "A physicist races to prove a discovery that could rewrite cosmology.", directorId: "d1", studioId: "st1", genreIds: ["g3", "g2"], actorIds: ["a1", "a2", "a20", "a4"] },
-//   { id: "m16", title: "The Painter's Ghost", releaseYear: 2013, rating: 6.6, description: "An art restorer becomes convinced a haunted painting is trying to communicate.", directorId: "d13", studioId: "st6", genreIds: ["g8", "g9"], actorIds: ["a25", "a6", "a27", "a26"] },
-//   { id: "m17", title: "Redline Serenade", releaseYear: 2018, rating: 7.3, description: "Underground street racers navigate loyalty and betrayal.", directorId: "d6", studioId: "st5", genreIds: ["g1", "g4"], actorIds: ["a19", "a21", "a3", "a35"] },
-//   { id: "m18", title: "The Orchard Keeper", releaseYear: 2012, rating: 7.5, description: "A reclusive orchard owner mentors a runaway teenager.", directorId: "d5", studioId: "st4", genreIds: ["g2"], actorIds: ["a16", "a17", "a18", "a30"] },
-//   { id: "m19", title: "Salt and Static", releaseYear: 2019, rating: 6.4, description: "A marine biologist and a fisherman clash over a dying reef.", directorId: "d10", studioId: "st1", genreIds: ["g2", "g6"], actorIds: ["a31", "a1", "a17", "a4"] },
-//   { id: "m20", title: "The Cipher Room", releaseYear: 2020, rating: 7.8, description: "Codebreakers race against time during a tense standoff.", directorId: "d2", studioId: "st2", genreIds: ["g5", "g9"], actorIds: ["a5", "a8", "a22", "a24"] },
-//   { id: "m21", title: "Wildfire Season", releaseYear: 2016, rating: 6.9, description: "A firefighting crew battles a blaze that hides a case of arson.", directorId: "d14", studioId: "st3", genreIds: ["g1", "g5"], actorIds: ["a33", "a32", "a2", "a20"] },
-//   { id: "m22", title: "The Marionette's Waltz", releaseYear: 2015, rating: 6.8, description: "A puppeteer's creations seem to move on their own.", directorId: "d8", studioId: "st6", genreIds: ["g8", "g10"], actorIds: ["a25", "a27", "a6", "a36"] },
-//   { id: "m23", title: "Coastal Static", releaseYear: 2014, rating: 7.0, description: "A radio DJ becomes the last voice broadcasting during a hurricane.", directorId: "d1", studioId: "st1", genreIds: ["g5", "g2"], actorIds: ["a2", "a3", "a4", "a1"] },
-//   { id: "m24", title: "The Longest Winter Road", releaseYear: 2011, rating: 7.2, description: "A trucking family fights to keep their business alive.", directorId: "d15", studioId: "st4", genreIds: ["g2"], actorIds: ["a37", "a38", "a10", "a13"] },
-//   { id: "m25", title: "Faultlines", releaseYear: 2022, rating: 8.2, description: "A seismologist predicts a catastrophic quake no one believes is coming.", directorId: "d1", studioId: "st1", genreIds: ["g5", "g3"], actorIds: ["a1", "a2", "a20", "a33"] },
-//   { id: "m26", title: "The Understudy", releaseYear: 2013, rating: 6.5, description: "A theater understudy's ambition spirals into obsession.", directorId: "d9", studioId: "st5", genreIds: ["g5", "g9"], actorIds: ["a28", "a29", "a34", "a9"] },
-//   { id: "m27", title: "Harbor Lights", releaseYear: 2017, rating: 7.6, description: "Two estranged sisters reunite to save their father's shipyard.", directorId: "d5", studioId: "st4", genreIds: ["g2", "g6"], actorIds: ["a16", "a18", "a30", "a31"] },
-//   { id: "m28", title: "The Glass Orchard", releaseYear: 2019, rating: 6.7, description: "A scientist's greenhouse experiment threatens to overrun the town.", directorId: "d3", studioId: "st3", genreIds: ["g3", "g8"], actorIds: ["a10", "a11", "a37", "a12"] },
-//   { id: "m29", title: "Nightfall Overture", releaseYear: 2021, rating: 7.9, description: "A composer's final symphony seems tied to a string of disappearances.", directorId: "d13", studioId: "st6", genreIds: ["g9", "g8"], actorIds: ["a25", "a26", "a6", "a29"] },
-//   { id: "m30", title: "Terminal Velocity", releaseYear: 2018, rating: 7.1, description: "A stunt pilot is drawn into an international smuggling ring.", directorId: "d12", studioId: "st2", genreIds: ["g1", "g5"], actorIds: ["a22", "a39", "a5", "a23"] },
-// ];
-
-// module.exports = { genres, studios, directors, actors, movies };
+// Pure seed data for CineGraph — separated from the runner script for readability.
+// This dataset uses real, well-known Bollywood and Tollywood (Telugu cinema)
+// films, actors, and directors. Titles, years, directors, and lead cast are
+// drawn from well-documented, widely known facts. A few studio-to-film
+// production credits are approximate/illustrative rather than verified —
+// this is seed data for a graph-database demo, not an authoritative
+// filmography, so double-check any specific credit before relying on it.
