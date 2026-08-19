@@ -20,8 +20,7 @@ export default function ExploreConnections() {
 
   const { data, status, error, reload } = useFetch(fetchExplore, [selectedId]);
 
-  // Group the flat query-5 result rows (movie -> actor -> other movie -> director)
-  // by the connected movie, since several actors can link to the same film.
+  
   const grouped = useMemo(() => {
     if (!data?.graph) return [];
     const map = new Map();
