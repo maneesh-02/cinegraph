@@ -1,10 +1,4 @@
-/* ============================================================
-   CineGraph design tokens
-   Direction: a cinema at night, not a dashboard. Deep theater-dark
-   background, marquee-gold accent, condensed poster display type.
-   Signature device: sprocket-hole (film-strip) dividers — literal
-   to the subject, used structurally between sections/cards.
-   ============================================================ */
+
 
 :root {
   --bg: #12141c;
@@ -114,9 +108,7 @@ p {
 }
 
 /* ---------- sprocket motif: the signature structural device ---------- */
-/* Represents a strip of film. Used as a divider between sections and
-   along the top edge of cards — never purely decorative, always marking
-   a real seam in the layout. */
+
 
 .sprocket-row {
   display: flex;
