@@ -1,3 +1,5 @@
+Live Demo : https://cinegraph-1-xj6o.onrender.com/
+
 # CineGraph
 
 A movie and series relationship explorer, built to demonstrate that a graph database is the natural fit when the core product experience *is* traversing relationships — not just storing records.
